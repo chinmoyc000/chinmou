@@ -46,7 +46,10 @@ export const FormEditor = () => {
 
 
   useEffect(() => {
-    editor.formData
+    new FormeoEditor({
+      controls: controlOptions,
+      editorContainer: editorRef.current
+    });
   }, [editorRef]);
 
   return <div ref={editorRef} />;
