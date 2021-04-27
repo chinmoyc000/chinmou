@@ -46,6 +46,7 @@ export const FormEditor = () => {
 
 
   useEffect(() => {
+    
     new FormeoEditor({
       controls: controlOptions,
       editorContainer: editorRef.current
