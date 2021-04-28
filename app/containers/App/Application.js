@@ -7,8 +7,8 @@ import { AppContext } from './ThemeWrapper';
 
 import {
   AnalyticDashboard, MarketingDashboard, CryptoDashboard,
-  ListUsers, AddUsersForm, Division, ComprehensveCompany, AddClientCompany, FormBuilder,
-  NotFound
+  ListUsers, AddUsersForm, Division, ComprehensveCompany, AddClientCompany, FormBuilder,AddTemplate,Repository,
+  ReortingTemplate,ListForm,NotFound
 } from '../pageListAsync';
 
 function Application(props) {
@@ -35,6 +35,11 @@ function Application(props) {
 
         {/* Form */ }
         <Route path="/app/add-form" component={FormBuilder} />
+        <Route exact path="/app/form" component={FormBuilder} />
+        <Route path="/app/form/reporting-template" component={ReortingTemplate} />
+        <Route path="/app/form/list-form" component={ListForm} />
+        <Route path="/app/form/add-template" component={AddTemplate} />
+        <Route path="/app/form/repository" component={Repository} />
 
         { /* Default */ }
         <Route component={NotFound} />

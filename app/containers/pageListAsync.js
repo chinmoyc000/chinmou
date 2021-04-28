@@ -83,8 +83,24 @@ export const AddClientCompany = Loadable({
   loading: Loading,
 });
 
-// Form
+//Form
 export const FormBuilder = Loadable({
   loader: () => import('./Pages/Application/Form/FormBuilder'),
+  loading: Loading,
+});
+export const ListForm = Loadable({
+  loader: () => import('./Pages/Application/Form/ListForm'),
+  loading: Loading,
+});
+export const ReortingTemplate = Loadable({
+  loader: () => import('./Pages/Application/Form/ReortingTemplate'),
+  loading: Loading,
+});
+export const Repository = Loadable({
+  loader: () => import('./Pages/Application/Form/Repository'),
+  loading: Loading,
+});
+export const AddTemplate = Loadable({
+  loader: () => import('./Pages/Application/Form/AddTemplate'),
   loading: Loading,
 });
