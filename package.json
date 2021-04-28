@@ -155,6 +155,7 @@
     "react-event-listener": "^0.6.1",
     "react-google-maps": "^9.4.5",
     "react-helmet": "6.0.0-beta",
+    "react-input-color": "^4.0.0",
     "react-intl": "2.8.0",
     "react-ionicons": "^2.1.6",
     "react-jss": "^10.0.0",

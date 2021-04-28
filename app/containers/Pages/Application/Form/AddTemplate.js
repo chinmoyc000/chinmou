@@ -15,6 +15,8 @@ import Typography from '@material-ui/core/Typography';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
+import InputColor from 'react-input-color';
+
 import {
   CheckboxRedux,
   SelectRedux,
@@ -46,8 +48,13 @@ const styles = theme => ({
     padding: 30
   },
   field: {
-    width: '100%',
-    marginBottom: 20
+    width: '96%',
+    marginBottom: 10
+  },
+  fieldColor: {
+    marginLeft: theme.spacing(1),
+    marginBottom: 20,
+    marginRight: theme.spacing(1)
   },
   fieldBasic: {
     width: '100%',
@@ -76,6 +83,7 @@ const initData = {
 
 function ReduxFormDemo(props) {
   const trueBool = true;
+  const [color, setColor] = React.useState({});
   const {
     classes,
     handleSubmit,
@@ -94,39 +102,23 @@ function ReduxFormDemo(props) {
               Settings
             </Typography>
             <form onSubmit={handleSubmit}>
-              <div>
+            <div className={classes.field}>
                 <Field
-                  name="text"
-                  component={TextFieldRedux}
-                  placeholder="Text Field"
-                  label="Text Field"
-                  validate={required}
-                  required
+                  name="Title"
                   className={classes.field}
-                />
-              </div>
-              <div>
-                <Field
-                  name="email"
                   component={TextFieldRedux}
-                  placeholder="Email Field"
-                  label="Email"
-                  required
-                  validate={[required, email]}
-                  className={classes.field}
+                  placeholder="Title"
+                  label="Title"
+                 
                 />
+                
               </div>
-              <div className={classes.fieldBasic}>
-                <FormLabel component="label">Choose One Option</FormLabel>
-                <Field name="radio" className={classes.inlineWrap} component={renderRadioGroup}>
-                  <FormControlLabel value="option1" control={<Radio />} label="Option 1" />
-                  <FormControlLabel value="option2" control={<Radio />} label="Option 2" />
-                </Field>
-              </div>
-              <div>
+
+            <div>
                 <FormControl className={classes.field}>
                   <InputLabel htmlFor="selection">Selection</InputLabel>
                   <Field
+                    className={classes.field}
                     name="selection"
                     component={SelectRedux}
                     placeholder="Selection"
@@ -138,12 +130,110 @@ function ReduxFormDemo(props) {
                   </Field>
                 </FormControl>
               </div>
-              <div className={classes.fieldBasic}>
-                <FormLabel component="label">Toggle Input</FormLabel>
-                <div className={classes.inlineWrap}>
-                  <FormControlLabel control={<Field name="onof" component={SwitchRedux} />} label="On/OF Switch" />
-                  <FormControlLabel control={<Field name="checkbox" component={CheckboxRedux} />} label="Checkbox" />
-                </div>
+
+              <div>
+              <Grid container spacing={0} alignItems="flex-start" direction="row">
+              <Grid item xs={12} md={9}>
+                <Field
+                  name="Paging_Text_Color"
+                  component={TextFieldRedux}
+                  placeholder="Paging Text Color"
+                  label="Paging Text Color"
+                  validate={required}
+                  required
+                  className={classes.fieldColor}
+                />
+                </Grid>
+                <Grid item xs={12} md={3}>
+                <InputColor style={{
+                height:35,
+                  marginTop: 22
+              
+                }}
+                initialValue="#5e72e4"
+                onChange={setColor}
+                placement="right"
+              />
+              </Grid>
+              </Grid>
+              </div>
+              <div>
+              <Grid container spacing={0} alignItems="flex-start" direction="row">
+              <Grid item xs={12} md={9}>
+                <Field
+                  name="Paging_Background_Color"
+                  component={TextFieldRedux}
+                  placeholder="Paging Background Color"
+                  label="Paging Background Color"
+                  validate={required}
+                  required
+                  className={classes.fieldColor}
+                />
+                </Grid>
+                <Grid item xs={12} md={3}>
+                <InputColor style={{
+                height:35,
+                  marginTop: 22
+              
+                }}
+                initialValue="#5e72e4"
+                onChange={setColor}
+                placement="right"
+              />
+              </Grid>
+              </Grid>
+              </div>
+              <div>
+              <Grid container spacing={0} alignItems="flex-start" direction="row">
+              <Grid item xs={12} md={9}>
+                <Field
+                  name="Heading_Background_Color"
+                  component={TextFieldRedux}
+                  placeholder="Heading Background Color"
+                  label="Heading Background Color"
+                  validate={required}
+                  required
+                  className={classes.fieldColor}
+                />
+                </Grid>
+                <Grid item xs={12} md={3}>
+                <InputColor style={{
+                height:35,
+                  marginTop: 22
+              
+                }}
+                initialValue="#5e72e4"
+                onChange={setColor}
+                placement="right"
+              />
+              </Grid>
+              </Grid>
+              </div>
+              <div>
+              <Grid container spacing={0} alignItems="flex-start" direction="row">
+              <Grid item xs={12} md={9}>
+                <Field
+                  name="text"
+                  component={TextFieldRedux}
+                  placeholder="Paging Background Color"
+                  label="Paging Background Color"
+                  validate={required}
+                  required
+                  className={classes.fieldColor}
+                />
+                </Grid>
+                <Grid item xs={12} md={3}>
+                 <InputColor style={{
+        height:35,
+          marginTop: 22
+       
+        }}
+        initialValue="#5e72e4"
+        onChange={setColor}
+        placement="right"
+      />
+      </Grid>
+      </Grid>
               </div>
               <div className={classes.field}>
                 <Field
@@ -152,10 +242,20 @@ function ReduxFormDemo(props) {
                   component={TextFieldRedux}
                   placeholder="Textarea"
                   label="Textarea"
-                  multiline={trueBool}
-                  rows={4}
+                 
                 />
+                
               </div>
+              <div className={classes.fieldBasic}>
+                <FormLabel component="label">Status</FormLabel>
+                <Field name="radio" className={classes.inlineWrap} component={renderRadioGroup}>
+                  <FormControlLabel value="option1" control={<Radio />} label="Active" />
+                  <FormControlLabel value="option2" control={<Radio />} label="Pending" />
+                </Field>
+              </div>
+              
+             
+             
               <div>
                 <Button variant="contained" color="secondary" type="submit" disabled={submitting}>
                   Submit
@@ -173,7 +273,10 @@ function ReduxFormDemo(props) {
         </Grid>
         <Grid item xs={12} md={8}>
           <Paper className={classes.root}>
-           
+          
+
+
+    
           </Paper>
         </Grid>
       </Grid>
