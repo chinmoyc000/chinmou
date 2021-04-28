@@ -131,7 +131,7 @@ function Repository(props) {
   return (
     <div className={classes.table}>
       <MUIDataTable
-        title="Employee list"
+        title="Reporting"
         data={data}
         columns={columns}
         options={options}

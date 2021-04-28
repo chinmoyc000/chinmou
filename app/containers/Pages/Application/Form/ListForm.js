@@ -29,7 +29,7 @@ const styles = theme => ({
   Checkout full documentation here :
   https://github.com/gregnb/mui-datatables/blob/master/README.md
 */
-function Repository(props) {
+function ListForm(props) {
   const columns = [
     {
       name: 'Name',
@@ -131,7 +131,7 @@ function Repository(props) {
   return (
     <div className={classes.table}>
       <MUIDataTable
-        title="Employee list"
+        title="list Form"
         data={data}
         columns={columns}
         options={options}
@@ -140,8 +140,8 @@ function Repository(props) {
   );
 }
 
-Repository.propTypes = {
+ListForm.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Repository);
+export default withStyles(styles)(ListForm);
