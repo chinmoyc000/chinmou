@@ -10,7 +10,6 @@ import SearchIcon from '@material-ui/icons/Search';
 import FullscreenOutlined from '@material-ui/icons/FullscreenOutlined';
 import FullscreenExitOutlined from '@material-ui/icons/FullscreenExitOutlined';
 import InvertColors from '@material-ui/icons/InvertColorsOutlined';
-import HelpOutlineOutlined from '@material-ui/icons/HelpOutlineOutlined';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -24,7 +23,6 @@ import menuMessages from 'enl-api/ui/menuMessages';
 import link from 'enl-api/ui/link';
 import UserMenu from './UserMenu';
 import SearchUi from '../Search/SearchUi';
-import SelectLanguage from '../SelectLanguage';
 import messages from './messages';
 import styles from './header-jss';
 
@@ -38,7 +36,6 @@ function Header(props) {
     margin,
     mode,
     title,
-    openGuide,
     history,
     signOut,
     dense,

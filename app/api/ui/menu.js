@@ -108,7 +108,32 @@ module.exports = [
         name: 'Add Form',
         icon: 'web_asset',
         link: '/app/add-form'
+      },
+      {
+        key: 'form-builder-list-form',
+        name: 'List Form',
+        icon: 'web_asset',
+        link: '/app/form/list-form'
+      },
+      {
+        key: 'form-builder-reporting-table',
+        name: 'Reporting Template',
+        icon: 'web_asset',
+        link: '/app/form/reporting-template'
+      },
+      {
+        key: 'form-builder-add-reporting-form',
+        name: 'Add Reporting Template',
+        icon: 'web_asset',
+        link: '/app/form/add-template'
+      },
+      {
+        key: 'form-builder-repository',
+        name: 'Repository',
+        icon: 'web_asset',
+        link: '/app/form/repository'
       }
+
 
 
     ]

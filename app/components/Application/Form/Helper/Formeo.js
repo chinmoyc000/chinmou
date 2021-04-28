@@ -38,15 +38,7 @@ export const FormEditor = () => {
       common: ['email'],
     },
   };
-
-  const editor = new FormeoEditor({
-    controls: controlOptions,
-    editorContainer: editorRef.current
-  });
-
-
   useEffect(() => {
-    
     new FormeoEditor({
       controls: controlOptions,
       editorContainer: editorRef.current
