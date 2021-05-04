@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Select from '@material-ui/core/Select';
@@ -67,3 +67,26 @@ SwitchRedux.propTypes = {
   input: PropTypes.object.isRequired,
 };
 /* End */
+
+
+
+
+class FileUploadWithPreviewCom extends React.Component {
+  render() {
+    const {
+      input: { value, onChange }
+    } = this.props
+    return (
+      <div>
+        <span>The current value is {value}.</span>
+        <button type="button" onClick={() => onChange(value + 1)}>
+          Inc
+        </button>
+        <button type="button" onClick={() => onChange(value - 1)}>
+          Dec
+        </button>
+      </div>
+    )
+  }
+}
+export const FileUploadWithPreviewComs=FileUploadWithPreviewCom;

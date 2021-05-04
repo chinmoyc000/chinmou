@@ -85,3 +85,9 @@ export SideSection from './Application/Users/UsersSideSection/SideSection';
 
 // FORM
 export FormBuilderFormeoComp from './Application/Form/FormBuilderFormeoComp';
+export AddTemplateTabOneComp from './Application/Form/AddTemplate/SettingsTabs/AddTemplateTabOneComp';
+export AddTemplateTabTwoComp from './Application/Form/AddTemplate/SettingsTabs/AddTemplateTabTwoComp';
+export AddTemplateTabThreeComp from './Application/Form/AddTemplate/SettingsTabs/AddTemplateTabThreeComp';
+//export FileUploadWithPreview from './Forms/FileUploadWithPreview';
+
+
